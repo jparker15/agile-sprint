@@ -1,0 +1,30 @@
+{
+  "name": "agile-sprint",
+  "version": "1.0.0",
+  "description": "A repo of a recreation of MEN backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparker15/agile-sprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparker15/agile-sprint/issues"
+  },
+  "homepage": "https://github.com/jparker15/agile-sprint#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
