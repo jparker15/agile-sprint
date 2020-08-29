@@ -21,7 +21,22 @@ app.get("/", (res,req) =>{
     res.json({"message":"message world"});
 });
 
-// mongoose.connect(connectURI);
+//mongodb connection
+const optionsObj = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+};
+
+mongoose.connect(connectURI,optionsObj,()=>{
+    console.log("server successful connection")
+});
+mongoose.connection.on("error", (err) =>{
+    console.log(`error connecting to MongoDB,\nError: ${err}`);
+});
+mongoose.connection.on("connected", () =>{
+    console.log("server attempting connection to database")
+})
+
 //start server liserner
 app.listen(port, ()=>{
     console.log(`server is listening on port ${port}`);
