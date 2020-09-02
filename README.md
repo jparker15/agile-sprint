@@ -11,3 +11,6 @@ How to Connect to MongoDB in app.js(
 How to use app.listen
 how to create a Mongo Model
 encrypting users passwords/ validating a email
+creating a midware
+exporting midware
+implementing a midware for a specific route
