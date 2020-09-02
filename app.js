@@ -8,6 +8,9 @@ const express = require("express");
 const port = process.env.PORT || 3005;
 const connectURI = process.env.MONGO;
 
+//midware
+const basemidware = require("./middleware/basemidware");
+
 //main express app
 const app = express();
 
@@ -17,7 +20,7 @@ const homeRouter = require("./routes/homeRouter");
 
 app.use("/", homeRouter);
 
-app.get("/", (res,req) =>{
+app.get("/demo", basemidware,(req,res) =>{
     res.json({"message":"message world"});
 });
 
@@ -27,9 +30,9 @@ const optionsObj = {
     useUnifiedTopology: true
 };
 
-mongoose.connect(connectURI,optionsObj,()=>{
-    console.log("server successful connection")
-});
+// mongoose.connect(connectURI,optionsObj,()=>{
+//     console.log("server successful connection")
+// });
 mongoose.connection.on("error", (err) =>{
     console.log(`error connecting to MongoDB,\nError: ${err}`);
 });
