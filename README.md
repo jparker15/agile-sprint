@@ -14,3 +14,4 @@ encrypting users passwords/ validating a email
 creating a midware
 exporting midware
 implementing a midware for a specific route
+creating a express router 
