@@ -17,8 +17,11 @@ const app = express();
 app.use(express.static("static"));
 
 const homeRouter = require("./routes/homeRouter");
+const userRouter = require("./routes/userRouter");
 
 app.use("/", homeRouter);
+
+app.use("/user", userRouter);
 
 app.get("/demo", basemidware,(req,res) =>{
     res.json({"message":"message world"});
